@@ -39,6 +39,8 @@ ROM types:
   aokp
   slim
   aex
+  gzosp
+  nitrogen
 
 Variants are dash-joined combinations of (in order):
 * processor type
@@ -143,6 +145,20 @@ function get_rom_type() {
                 mainbranch="or8.1"
                 localManifestBranch="android-8.1"
                 treble_generate="slim"
+                extra_make_options="WITHOUT_CHECK_API=true"
+                ;;
+            gzosp)
+                mainrepo="https://github.com/GZOSP/manifest.git "
+                mainbranch="8.1"
+                localManifestBranch="android-8.1"
+                treble_generate="gzosp"
+                extra_make_options="WITHOUT_CHECK_API=true"
+                ;;
+            nitrogen)
+                mainrepo="https://github.com/nitrogen-project/android_manifest.git "
+                mainbranch="o2"
+                localManifestBranch="android-8.1"
+                treble_generate="nitrogen"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
 
